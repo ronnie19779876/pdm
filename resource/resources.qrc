@@ -1,0 +1,43 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file alias="collapseall">icons/collapseall.png</file>
+        <file alias="expandall">icons/expandall.png</file>
+        <file alias="newtenant">icons/newtenant.png</file>
+        <file alias="refresh">icons/refresh.png</file>
+        <file alias="connected">icons/connected.png</file>
+        <file alias="disconnected">icons/disconnected.png</file>
+        <file alias="tenant">icons/tenant.png</file>
+        <file alias="remove">icons/remvoe.png</file>
+        <file alias="addnew">icons/addnew.png</file>
+        <file alias="namespace">icons/namespace.png</file>
+        <file alias="pulsar">icons/pulsar.png</file>
+        <file alias="modify">icons/modify.png</file>
+        <file alias="broken-link">icons/broken-link.png</file>
+        <file alias="link">icons/link.png</file>
+        <file alias="exit">icons/exit.png</file>
+        <file alias="token">icons/token.png</file>
+        <file alias="delete-tenant">icons/delete-tenant.png</file>
+        <file alias="new-namespace">icons/new-namespace.png</file>
+        <file alias="permission">icons/permission.png</file>
+        <file alias="copy">icons/copy.png</file>
+        <file alias="message">icons/message.png</file>
+        <file alias="overview">icons/overview.png</file>
+        <file alias="sql">icons/sql.png</file>
+        <file alias="start">icons/start.png</file>
+        <file alias="stop">icons/stop.png</file>
+        <file alias="storage">icons/storage.png</file>
+        <file alias="update">icons/update.png</file>
+        <file alias="new-cluster">icons/new-cluster.png</file>
+        <file alias="subscription">icons/subscription.png</file>
+        <file alias="copy-cell">icons/copy-cell.png</file>
+        <file alias="copy-row">icons/copy-row.png</file>
+        <file alias="export">icons/export.png</file>
+        <file alias="function">icons/function.png</file>
+        <file alias="import">icons/import.png</file>
+        <file alias="folder">icons/folder.png</file>
+        <file alias="role">icons/role.png</file>
+        <file alias="topic">icons/topic.png</file>
+        <file alias="publish">icons/publish.png</file>
+    </qresource>
+</RCC>
