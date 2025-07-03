@@ -1,0 +1,1 @@
+The Pulsar desktop manager is a GUI application which can allow you to connect and manage Apache Pulsar message broker. This application is base on Qt6 C++ framework developing. I hope that everyone is able to interested in this project and participate in our project.
