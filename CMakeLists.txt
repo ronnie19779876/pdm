@@ -161,14 +161,15 @@ else()
 endif()
 
 if(APPLE)
+
     # Enable RPATH handling
     set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
     set(CMAKE_INSTALL_RPATH "@executable_path/../Frameworks;@loader_path/../Frameworks")
 
     # Find Pulsar library
-    find_library(PULSAR_LIBRARY NAMES libpulsar.dylib HINTS /opt/homebrew/lib)
+    find_library(PULSAR_LIBRARY NAMES libpulsar.dylib HINTS ${CMAKE_SOURCE_DIR}/library/pulsar/macos/lib)
     #find_library(PULSAR_LIBRARY NAMES libpulsar.dylib HINTS /opt/homebrew/lib)
-    find_path(PULSAR_INCLUDE_DIR pulsar/Client.h HINTS /opt/homebrew/include)
+    find_path(PULSAR_INCLUDE_DIR pulsar/Client.h HINTS ${CMAKE_SOURCE_DIR}/library/pulsar/macos/include)
 
     # Specify the macOS bundle properties
     set_target_properties(PDM PROPERTIES
@@ -221,8 +222,7 @@ if(APPLE)
     add_custom_command(TARGET PDM POST_BUILD
             COMMAND install_name_tool
             # Change the library path to a relative or absolute path
-            -change "/Users/ronnie/Qt/6.9.1/macos/lib/qca-qt6.framework/Versions/2/qca-qt6" "@rpath/qca-qt6.framework/Versions/2/qca-qt6"
-            -change "/opt/homebrew/opt/libpulsar/lib/libpulsar.dylib" "@rpath/libpulsar.dylib"
+            -change "${CMAKE_PREFIX_PATH}/lib/qca-qt6.framework/Versions/2/qca-qt6" "@rpath/qca-qt6.framework/Versions/2/qca-qt6"
             $<TARGET_FILE:PDM>
             COMMENT "Running install_name_tool to update library paths for PDM")
 endif()
